@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<center>    
+    <h1>Complete</h1>
+    <p>These are the completed !</p>
+    <a href="{% url 'restore_all' %}">Restore All</a>
+    <a href="{% url 'cdelete_all' %}">Delete All</a>
+
+    {% for i in data %}
+    <hr>
+        <span>Title</span> : {{i.title}}<br>
+        <span>Desc</span> : {{i.desc}}<br>
+    <a href="{% url 'restore' i.id %}">Restore</a>
+    <a href="{% url 'cdelete' i.id %}">Delete</a><hr>
+    {% endfor %}
+</center>
+
+
+{% endblock %}
+

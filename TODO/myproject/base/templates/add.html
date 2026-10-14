@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Add</h1>
+<center>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Title</label>
+        <input type="text" name="text" id=""><br>
+
+        <label>DESC</label>
+        <input type="text" name="desc" id=""><br>
+        <button>Submit</button>
+
+    </form>
+</center>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+<h1>About Our TODO App</h1>
+
+<p>
+    Welcome to TODO App, a simple and organized way to manage your daily tasks.
+    This application helps you keep track of your work, remember important
+    activities, and stay focused on what needs to be done.
+</p>
+
+<p>
+    You can add new tasks, update existing tasks, mark tasks as completed,
+    and move tasks to the trash when they are no longer needed.
+    Everything is designed to make managing your everyday activities easier.
+</p>
+
+<p>
+    Whether you are managing college assignments, personal goals, or daily
+    responsibilities, TODO App helps you organize your work in one place.
+</p>
+
+<p>
+    **Our goal:** To make task management simple, clear, and efficient,
+    so you can spend less time organizing your work and more time getting
+    things done.
+</p>
+
+{% endblock %}

@@ -1,0 +1,150 @@
+
+   /* PAGE HEADINGS */
+
+
+h1 {
+    color: #17243a;
+    font-size: 29px;
+    font-weight: 700;
+    text-align: center;
+    margin: 35px auto 24px;
+}
+
+
+
+   /* MAIN CONTENT  */
+
+center {
+    display: block;
+    width: 500px;
+    margin: 32px auto;
+    padding: 28px;
+    background:white;
+    border: 1px solid white;
+    border-radius: 12px;
+    box-shadow: 0 5px 24px rgba(23, 36, 58, 0.05);
+    text-align: left;
+}
+
+center h1 {
+    margin-top: 0;
+}
+
+p {
+    margin: 8px 0 20px;
+    color: #697586;
+    font-size: 15px;
+}
+
+
+   /* TASK SEPARATORS */
+
+
+hr {
+    border: 0;
+    border-top: 1px solid #e7ebf2;
+    margin: 20px 0;
+}
+
+
+   /* LINKS AND ACTIONS */
+
+a{
+    color: #315fc5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #20499f;
+}
+
+center > a {
+    display: inline-block;
+    margin: 4px 6px 4px 0;
+    padding: 8px 13px;
+    border: 1px solid #dce5f3;
+    border-radius: 6px;
+    background: #f4f7fd;
+    color: #315fc5;
+    font-size: 13px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+center > a:hover {
+    background: #e7efff;
+    border-color: #b9cef4;
+}
+
+
+   /* FORMS */
+
+
+form {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin: 16px 0 7px;
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+form input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    border: 1px solid #d6deea;
+    border-radius: 7px;
+    outline: none;
+    background: #fbfcfe;
+    color: #263247;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+
+
+
+   /* SUBMIT BUTTON */
+
+
+form button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 25px;
+    border: none;
+    border-radius: 7px;
+    background: #315fc5;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+form button:hover {
+    background: navy;
+}
+
+   /* ABOUT PAGE */
+
+body > p {
+    max-width: 780px;
+    margin: 20px auto;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e5eaf2;
+    border-radius: 10px;
+    line-height: 1.9;
+}
+
+
