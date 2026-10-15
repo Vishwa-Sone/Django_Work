@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<center>
+{{data}}
+{{data.0.car_name}}
+
+{% for i in data_all%}
+{{i.car_name}} // {{i.color}}//{{i.price}}<br>
+<a href="{% url 'update' i.id %}">Update</a>
+<a href="{% url 'hdelete' i.id %}">delete</a><br>
+{% endfor %} 
+
+<br><hr>
+{% for i in filter %}
+{{i.car_name}} // {{i.color}} // {{i.price}}
+{% endfor %}
+</center>
+
+{% endblock %}
+
+

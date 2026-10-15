@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>This is add page</h1>
+<center>
+    <h1>This is Get Method</h1>
+    <form action="" method="GET">
+        <label for="">CarName</label>
+        <input type="text" name="name"><br>
+        
+        <label for="">Color</label>
+        <input type="text" name="color"><br>
+
+        
+        <label for="">Price</label>
+        <input type="text" name="price"><br>
+
+        <button >Submit</button>
+
+    </form>
+        <h1>THis ia  post method</h1>
+
+        <form method="POST">
+        {% csrf_token %}
+        <label for="">CarName</label>
+        <input type="text" name="name"><br>
+        
+        <label for="">Color</label>
+        <input type="text" name="color"><br>
+
+        
+        <label for="">Price</label>
+        <input type="text" name="price"><br>
+
+        <button >Submit</button>
+
+    </form>
+</center>
+{% endblock %}

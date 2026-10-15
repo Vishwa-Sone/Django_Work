@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>Update page</h1>
+
+  <center>
+    </form>
+        <h1>This ia  post method</h1>
+
+        <form method="POST">
+        {% csrf_token %}
+    
+        <label for="">CarName</label>
+        <input type="text" name="name" value="{{data.car_name}}"><br>
+        
+        <label for="">Color</label>
+        <input type="text" name="color" value="{{data.color}}"><br>
+
+        
+        <label for="">Price</label>
+        <input type="text" name="price" value="{{data.price}}"><br>
+
+        <button >Submit</button>
+
+    </form>
+    </center>
+
+{% endblock %}
