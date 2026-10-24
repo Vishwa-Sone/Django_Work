@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% block abc %}
+    {% endblock %}
+    <h1>This is main</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quisquam excepturi dolore repellat magnam libero consequatur quod dolores doloribus enim maiores. Delectus temporibus obcaecati modi sint numquam mollitia voluptatibus veniam.</p>
+
+    <nav>
+        <a href="{% url 'home' %}">HOME</a>
+        <a href="{% url 'about' %}">ABOUT</a>
+        <a href="{% url 'fashion' %}">FASHION</a>
+        
+    </nav>
+
+</body>
+</html>
