@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+
+{% block abc %}
+<h1>This is home page</h1>
+
+<h2>Data</h2 >
+{{data}}<br>
+{{data.0}}<br>
+{{data.1}}<br>
+{{data|upper}}<br>
+{{data|truncatewords:2}}<br>
+{{data|truncatechars:2}}<br>
+
+<h2>List</h2>
+{{list}}<br>
+{{list.0}}<br>
+{{list.1}}<br>
+{{list.4.0}}<br>
+
+<h2>Using for loop</h2>
+{% for i in list %}
+<h3>{{i}}</h3>
+{% endfor %}
+
+
+<h2>
+    {{age}}<br>
+
+    {% if age > 22 %}
+        <h2>You can enter into pub</h2>
+    {% elif age > 20 %}
+        <h2>You can enter but cant drink</h2>
+    {% else %}
+        <h2>You will be kicked</h2>
+    {% endif %}
+
+
+
+</h2>
+{% endblock %}
