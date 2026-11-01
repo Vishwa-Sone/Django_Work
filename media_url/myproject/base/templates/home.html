@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>This is home page</h1>
+<center>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="">Student Name</label>
+    <input type="text" name="name" id=""><br><br>
+    <label for="">Course</label>
+    <input type="text" name="course"><br><br>
+    <label for="">Image</label>
+    <input type="file" name="img" id=""><br><br>
+    <button type="submit">Submit</button>
+    <hr>
+
+</form>
+<center>
+{% for i in data %}
+{{i.std_name}} // {{i.course}}<br>
+<img src={{i.image.url}} style="height: 300px;width: 200px"><br>
+{% endfor %}
+</center>
+
+
+{% endblock %}
