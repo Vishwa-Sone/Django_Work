@@ -1,0 +1,49 @@
+{% extends 'main.html' %}
+
+
+{% block abc %}
+<h1>This is home page</h1>
+    <table border="2px">
+        <tr>
+            <th>SLNO</th>
+            <th>Name</th>
+            <th>Ph No</th>
+            <th>Course</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>Kiran</td>
+            <td>1314675241</td>
+            <td><a href="{% url 'student' 1 %}">Click me</a></td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Varun</td>
+            <td>1234351549</td>
+            <td><a href="{% url 'student' 2 %}">Click me</a></td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Vivek</td>
+            <td>14654163131</td>
+            <td><a href="{% url 'student' 3 %}">Click me</a></td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Chetan</td>
+            <td>4654846131</td>
+            <td><a href="{% url 'student' 4 %}">Click me</a></td>
+        </tr>
+        <tr>
+            <td>05</td>
+            <td>Achal</td>
+            <td>4864566546</td>
+            <td><a href="{% url 'student' 5 %}">Click me</a></td>
+        </tr>
+
+    </table> 
+    <hr>
+    <br>
+    <a href="{% url 'employee' 'Kiran' %}">Details of kiran</a>  
+
+{% endblock %}
