@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>This is update page</h1>
+<center>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <br><br>
+
+</center>
+{% endblock %}
+
