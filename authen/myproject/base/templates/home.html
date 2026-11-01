@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>This is home page </h1>
+<center>
+    {{count}}
+    <form>
+        <input type="text" name="q">
+        <button type="submit">Search</button>
+    </form>
+    <a href="{% url 'hdelete_all' %}">Delete All</a>
+    {% if messages %}
+        {% for i in messages %}
+           <h1 style="color: red;">{{i}}</h1>
+        {% endfor %}
+    {% endif %}
+    {% for i in data %}
+    <h2> {{i.id}}// {{i.title}} // {{i.desc}} </h2>
+    <a href="{% url 'hdelete' i.id %}">Delete</a>
+
+    {% endfor %}
+</center>
+{% endblock %}

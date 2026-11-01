@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<center>
+    
+    <img src="{{ data.image.url }}" alt="Profile image" style="height: 200px;width: 200px;border-radius: 50%;">
+
+<h2>Profile page</h2>
+    {{ profile_user.is_authenticated }}<br><br>
+    {{ profile_user.username }}<br><br>
+    FIRST NAME : {{ request.user.first_name }}<br><br>
+    LAST NAME : {{ request.user.last_name }}<br><br>
+    EMAIL : {{ request.user.email }}<br><br>
+
+<a href="{% url 'logout_' %}">Logout</a><br>
+<a href="{% url 'reset_password' %}">Reset Password</a>
+<a href="{% url 'update' %}">Update</a>
+
+{% if messages %}
+    {% for message in messages %}
+        <p style="color: red;">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+</center>
+
+
+{% endblock %}

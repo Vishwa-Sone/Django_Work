@@ -1,0 +1,19 @@
+<nav>
+    <div class="logo">
+        <h1>TODO</h1>
+    </div>
+    <div class="links">
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'home' %}">HOME</a>
+        <a href="{% url 'add' %}">ADD</a>
+        <a href="">COMPLETED</a>
+        <a href="{% url 'trash' %}">TRASH</a>
+        <a href="{% url 'profile' %}">PROFILE ({{request.user}}) <img src="{{img.image.url}}" alt="" height="50px" width="50px" style="border-radius: 50%;"></a>
+        <a href="{% url 'logout_'  %}">LOGOUT</a>
+        <a href="">ABOUT</a>
+        {% else %}
+        <a href="{% url 'login_' %}">LOGIN</a>
+        <a href="{% url 'register' %}">REGISTER</a>
+        {% endif %}
+    </div>
+</nav>

@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<center>
+    <h1>This is trash page </h1>
+    <a href="{% url 'trestore_all' %}">Restore All</a>
+    <a href="{% url 'tdelete_all' %}">Delete All</a>
+    {% if messages %}
+        {% for i in messages %}
+           <h1 style="color: red;">{{i}}</h1>
+        {% endfor %}
+    {% endif %}
+    {% for i in data %}
+        <h2> {{i.title}} // {{i.desc}} </h2>
+        <a href="{% url 'restore' i.id %}">Restore</a>
+        <a href="{% url 'tdelete' i.id %}">Delete</a>
+    {% endfor %}
+</center>
+{% endblock %}
