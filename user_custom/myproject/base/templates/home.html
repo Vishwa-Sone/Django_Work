@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<center>
+    <h1>This is home page</h1>
+
+    <center>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+
+            {% for i in form %}
+               {{i.label}}
+               {{i}}<br>
+               {{i.errors}}
+            {% endfor %}
+            <button type="submit">Submit</button>
+
+        </form>
+    </center>
+</center>
+{% endblock %}

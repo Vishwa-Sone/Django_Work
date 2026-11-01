@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<center>
+    <h1>This is apple page</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        
+            {% for i in form %}
+               {{i.label}}
+               {{i}}<br><br>
+               {{i.errors}}
+            {% endfor %}
+        <button type="submit">Register</button>
+
+    </form>
+
+</center>
+{% endblock %}
