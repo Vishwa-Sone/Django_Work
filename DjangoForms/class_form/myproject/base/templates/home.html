@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+{% block content %}
+<h1>This is home in base</h1>
+
+<center>
+<h1>HTML form</h1>
+<form method="POST">
+    {% csrf_token %}
+    <label>Name:</label>
+    <input type="text" name="name" id="std_name"> <br><br>
+
+    
+    <label>Number:</label>
+    <input type="number" name="number"> <br><br>
+
+    
+    <label>Email:</label>
+    <input type="email" name="email"> <br><br>
+
+    <button>Submit</button>
+</form>
+</center>
+
+
+<hr>
+<center>
+<h1>Django Forms</h1>
+<form method="POST">
+    {% csrf_token %}
+
+    {{form.as_p}}
+    <button type="submit">Submit</button>
+    
+</form>
+
+</center>
+
+<center>
+    {% for i in data %}
+        <h3> {{i.name}} // {{i.phone}} // {{i.email}} <a href="{% url 'update' i.id %}">Update</a></h3>
+    
+    {% endfor %}
+</center>
+
+{% endblock %}

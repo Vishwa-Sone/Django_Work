@@ -1,0 +1,74 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<center>
+    <h2>form_display</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>Submit</button>
+    </form>
+</center>
+<hr>
+
+<center>
+    <h2>form_display table</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <table>          
+            {{form.as_table}}
+        </table>
+
+        <button>Submit</button>
+    </form>
+</center>
+<hr>
+
+<center>
+    <h2>form_display ul</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <ul>          
+            {{form.as_ul}}
+        </ul>
+
+        <button>Submit</button>
+    </form>
+</center>
+<hr>
+
+
+<center>
+    <h2>Loop Method</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {% for i in form %}
+            {{ i.label_tag }}
+            {{i}}
+            {{i.error}}
+        {% endfor %}
+
+        <button>Submit</button>
+    </form>
+</center>
+<hr>
+
+
+<center>
+    <h2>form_display</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="">{{form.name.label}}</label>
+        {{ form.name }}<br>
+
+        <label for="">{{form.number.label}}</label>
+        {{form.number}}<br>
+
+        
+        <label for="">{{form.email.label}}</label>
+        {{form.email}}<br>
+
+        <button type="submit">Submit</button>
+    </form>
+</center>
+{% endblock %}
